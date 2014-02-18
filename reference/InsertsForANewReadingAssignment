@@ -1,0 +1,18 @@
+INSERT INTO Readings (Title, NumberOfPages, StartPage)
+ VALUES ("Place illusion and plausibility can lead to realistic behaviour in immersive virtual environments", 9,3549);
+Select * From Readings; -- order by Title;
+
+INSERT INTO Authors (FirstName, LastName, MiddleName)
+VALUES ("Mel", "Slater", "");
+
+Select * from Authors;
+
+Insert into ReadingAssignments(idReadingRA, idClassRA, DueDate, StartPage, EndPage) 
+Values (50,9,"2014-02-9", 3549, 3557);
+Select * from ReadingAssignments  Order by DueDate;
+
+
+-- Anthropology 5
+-- Digital Media 6
+-- Constructionism 7
+-- Designing in virutal reality 9

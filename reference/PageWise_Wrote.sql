@@ -1,0 +1,56 @@
+CREATE DATABASE  IF NOT EXISTS `PageWise` /*!40100 DEFAULT CHARACTER SET latin1 */;
+USE `PageWise`;
+-- MySQL dump 10.13  Distrib 5.5.35, for debian-linux-gnu (x86_64)
+--
+-- Host: localhost    Database: PageWise
+-- ------------------------------------------------------
+-- Server version	5.5.35-0ubuntu0.13.10.2
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8 */;
+/*!40103 SET @OLD_TIME_ZONE=@@TIME_ZONE */;
+/*!40103 SET TIME_ZONE='+00:00' */;
+/*!40014 SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0 */;
+/*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
+/*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
+/*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
+
+--
+-- Table structure for table `Wrote`
+--
+
+DROP TABLE IF EXISTS `Wrote`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `Wrote` (
+  `idReadingW` int(11) NOT NULL,
+  `idAuthorW` int(11) NOT NULL,
+  PRIMARY KEY (`idReadingW`,`idAuthorW`),
+  KEY `idAuthorW1_idx` (`idAuthorW`),
+  CONSTRAINT `idAuthorW1` FOREIGN KEY (`idAuthorW`) REFERENCES `Authors` (`idAuthor`) ON DELETE NO ACTION ON UPDATE NO ACTION,
+  CONSTRAINT `idReadingW1` FOREIGN KEY (`idReadingW`) REFERENCES `Readings` (`idReading`) ON DELETE NO ACTION ON UPDATE NO ACTION
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `Wrote`
+--
+
+LOCK TABLES `Wrote` WRITE;
+/*!40000 ALTER TABLE `Wrote` DISABLE KEYS */;
+INSERT INTO `Wrote` VALUES (1,1),(2,2),(3,4),(4,4),(5,4),(6,4),(7,5),(7,6),(8,7),(9,8),(10,9),(11,10),(12,11),(13,12),(14,13),(15,14),(16,15),(22,15),(17,16),(18,17),(24,17),(19,18),(21,19),(20,20),(22,22),(23,23),(23,24),(25,25),(26,26),(27,27),(28,28),(29,29),(30,30),(31,31),(32,32),(33,33),(34,33),(41,33),(34,34),(41,34),(35,35),(36,36),(37,37),(37,38),(37,39),(37,40),(37,41),(38,42),(39,45),(39,46),(42,47),(42,48),(42,49),(43,50),(43,51),(43,52),(43,53),(43,54),(45,55),(50,55),(44,56),(46,57),(46,58),(46,59),(46,60),(47,61),(47,62),(47,63),(47,64),(49,65);
+/*!40000 ALTER TABLE `Wrote` ENABLE KEYS */;
+UNLOCK TABLES;
+/*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
+
+/*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
+/*!40014 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS */;
+/*!40014 SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS */;
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
+/*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
+
+-- Dump completed on 2014-02-09 22:59:33

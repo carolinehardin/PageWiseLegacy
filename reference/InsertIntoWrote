@@ -1,0 +1,7 @@
+INSERT INTO `PageWise`.`Wrote`
+(`idReadingW`, `idAuthorW`) VALUES (50,55);
+
+
+-- Select * from ReadingsWithAuthors;
+
+Select * from Wrote Order by idReadingW;

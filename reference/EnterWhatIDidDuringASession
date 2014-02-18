@@ -1,0 +1,55 @@
+INSERT INTO `PageWise`.`PagesRead`
+(`PageNumber`,
+`Status`,
+`idReadingPA`,
+`idSessionPA`)
+
+(SELECT number, "Notes",
+ (SELECT idReading from Readings where Title Like "Software design%")
+, 
+(Select MAX(idSession) from Sessions)
+
+  from numbers where number between 1 AND 6);
+
+Select * from PagesRead;
+
+
+-- (`idReadingPA`,
+-- `PageNumber`,
+-- `Status`,
+-- `idSessionPA`)
+
+-- (SELECT idReading, 1, "Read",  4  from Reading where Title Like 'Digital art%')
+
+
+-- SELECT name FROM world   WHERE name LIKE 'G%'
+
+-- INSERT INTO user_perms (user_id,user_name,pass_hash,require_dez,locked) VALUES ((select user_id from user_info where email='user@email.com'),'jimbob','EMPTY','1','F');
+
+-- INSERT INTO Reading (Title, NumberOfPages, StartPage) VALUES ("New Literacies in the elementary classroom", 13, 87);
+-- INSERT INTO Authors (FirstName, LastName, MiddleName) VALUES ("Dawnene", "Hassett", "D");
+-- INSERT INTO Wrote (idReadingW, idAuthorW) VALUES (7,6);
+-- INSERT INTO ReadingAssignments (StartPage, EndPage, DueDate, idReadingRA, idClassRA) Values 
+-- (0,0, "2013-10-21",8,1);
+
+-- SELECT (PageNum, status='read', session='10' from blankPages where pageNum is between 2 and 10);
+
+
+-- SELECT N FROM numbers WHERE numbers < 10,
+
+-- INSERT INTO PagesAttempted(numbers)
+-- SELECT n FROM generator_64k WHERE n < 64000
+
+-- DELIMITER $$
+-- Create Procedure 'markPagesRead'()
+-- BEGIN
+-- DECLARE i INT;
+-- SET i = 1;
+-- WHILE (i <= 3) DO
+ -- INSERT INTO PagesAttempted (Status, PageNumber, idReadingPA, idSessionPA) Values ("Skimmed", i, 8, 3);
+-- SET i = i +1
+-- END WHILE;
+
+-- END
+
+

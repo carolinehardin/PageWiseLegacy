@@ -1,0 +1,15 @@
+-- INSERT INTO Classes (Name, idSemC) VALUES ("Designing in Virtual Reality", 2);
+-- Select * from Classes;
+
+Insert into Homework (Title, Description, DueDate, DueTime, idClassH) Values
+("Blog response to articles",
+ "", 
+"2014-02-9",
+"11:59am", 9);
+
+Select * from Homework order by DueDate;
+
+-- Anthropology 5
+-- Digital Media 6
+-- Constructionism 7
+-- Designing in virutal reality 9
